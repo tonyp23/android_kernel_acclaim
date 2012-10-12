@@ -114,10 +114,9 @@ struct otg_transceiver {
 
 	/* start or continue HNP role switch */
 	int	(*start_hnp)(struct otg_transceiver *otg);
-	
+
 	/* start or continue HNP role switch */
 	int     (*get_link_status)(struct otg_transceiver *otg);
-
 
 };
 

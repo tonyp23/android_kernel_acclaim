@@ -38,7 +38,7 @@
 #include <linux/gpio.h>
 #include <linux/interrupt.h>
 #include <linux/fs.h>
-#include <linux/max17042.h>
+#include <linux/power/max17042.h>
 //#include <mach/board-boxer.h>
 #include <linux/ctype.h>
 #include <linux/slab.h>
@@ -63,8 +63,8 @@
 #define HISTORY_MAGIC		0x1234
 
 /*leave the debug msg on until later release TBD*/
-//#define DEBUG(x...) 			printk(x)
-#define DEBUG(x...)
+#define DEBUG(x...) 			printk(x)
+
 // DEBUG_NO_BATTERY is used for configs without a real battery (bench supply)
 // this produces no Alert signal on faults (like temperature/capacity)
 
