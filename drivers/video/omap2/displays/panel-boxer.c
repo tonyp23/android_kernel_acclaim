@@ -98,8 +98,8 @@ static void boxer_panel_spi_init (void)
 	printk	("%s\n", __FUNCTION__);
 
 	gpio_direction_output (OMAP_FT5x06_POWER_GPIO, 1);
-
 	msleep(LCD_RST_DELAY);
+<<<<<<< HEAD
 /*BN 1.4.0 kernel driver
 	spi_send(boxer_spi_device, 0x00, 0x00);
         spi_send(boxer_spi_device, 0x00, 0xad);
@@ -112,6 +112,8 @@ static void boxer_panel_spi_init (void)
         spi_send(boxer_spi_device, 0x0a, 0x28);
         spi_send(boxer_spi_device, 0x10, 0x41);*/
 /*BN 1.4.1-1.4.3 kernel driver*/
+=======
+>>>>>>> 17ae636c157fa831f2974d505977db135c72d6f9
 	spi_send(boxer_spi_device, 0x00, 0x21);
 	spi_send(boxer_spi_device, 0x00, 0xa5);
 	spi_send(boxer_spi_device, 0x01, 0x30);
@@ -177,7 +179,11 @@ static void boxer_panel_stop(struct omap_dss_device *dssdev)
 
 	msleep(350);
 	gpio_direction_output (OMAP_FT5x06_POWER_GPIO, 0);
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 17ae636c157fa831f2974d505977db135c72d6f9
 	omapdss_dpi_display_disable(dssdev);
 }
 
